@@ -12,10 +12,10 @@
   <main id="content">
     <h1>Account Deletion</h1>
     <p class="status">Publication draft — this page is informational and does not submit a deletion request.</p>
-    <p class="meta">Last updated July 31, 2026 · deletion-v3-publication-draft</p>
+    <p class="meta">Last updated August 8, 2026.</p>
 
     <h2>Delete in the app</h2>
-    <p>Sign in, open <strong>Settings → Delete Account</strong>, review the warning, reauthenticate if requested and type DELETE. A troop owner must first transfer or delete owned troops. An external renewing subscription may need to be canceled through Apple or Google.</p>
+    <p>Sign in, open <strong>Settings → Delete Account</strong>, review the warning, reauthenticate if requested and type DELETE. A troop owner must first transfer or delete owned troops. An external renewing subscription must be canceled through Apple separately.</p>
 
     <h2>Get signed-out help</h2>
     <p>Email <a href="mailto:eventsofficialapp@gmail.com">eventsofficialapp@gmail.com</a> with “Account deletion” in the subject. Do not send a password, authentication code, identity document, payment details or health information. Events may verify the account and requester's authority.</p>
@@ -24,10 +24,10 @@
     <p>Account-only data is intended to be removed through the deployed deletion process. Shared records, another person's independently controlled information, legally required records and historical references may require limited retention or de-identification. Store subscriptions are controlled separately. Already-issued authentication tokens may remain valid until expiry even after the authentication user is deleted.</p>
 
     <h2>RevenueCat and store records</h2>
-    <p>The current in-app deletion function does not automatically delete the RevenueCat customer or send deletion work to RevenueCat, Apple or Google. Purchase and transaction records may remain for subscription restoration, fraud prevention, accounting, tax, dispute, legal or platform obligations. Use the email above for a separate processor-deletion request; Events may be unable to erase records controlled independently by a store.</p>
+    <p>Before deleting the authentication user, the account-deletion operation attempts RevenueCat subscriber deletion using the account UUID. If that processor deletion cannot complete, the operation reports pending processor cleanup rather than continuing to authentication-user deletion. Apple purchase and transaction records remain independently controlled and may be retained for restoration, fraud prevention, accounting, tax, dispute, legal or platform obligations.</p>
 
     <h2>Timing</h2>
-    <p>No universal active-system, processor or backup deletion period is currently verified. Events will not publish a specific deadline until its technical controls, vendor settings and legal obligations are confirmed.</p>
+    <p>No universal active-system, processor or backup deletion period is published. The configured safety-data defaults are 60 days for event safety submissions, 30 days for transportation data, 365 days before reusable-profile reconfirmation and a 30-day reusable-profile grace period. A retention worker must be separately scheduled and destructive runs separately authorized.</p>
   </main>
   <footer><a href="/events-legal/legal/privacy/">Privacy Policy</a> · <a href="/events-legal/support/">Support</a></footer>
 </body>

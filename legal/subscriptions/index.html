@@ -11,22 +11,22 @@
   <header><div><a href="/events-legal/">Events</a><nav aria-label="Primary"><a href="/events-legal/legal/">Legal</a><a href="/events-legal/support/">Support</a></nav></div></header>
   <main id="content">
     <h1>Subscriptions &amp; Refunds</h1>
-    <p class="status">Publication draft — billing is not production-ready and no purchase should be offered from this draft.</p>
-    <p class="meta">Last updated July 31, 2026 · billing-v4-publication-draft</p>
-    <p>The current source is designed for one monthly Troop Pro subscription. The purchase screen obtains the localized Apple or Google price and renewal period from the store. No free trial is verified. The Supabase migration and Edge Functions needed to synchronize and verify RevenueCat purchases remained absent when rechecked July 31, 2026.</p>
+    <p class="status">Publication draft. iOS subscription capability is enabled and the deployed product allowlists are aligned, but App Store, RevenueCat dashboard and signed-device lifecycle verification remain required before a paid-launch readiness claim.</p>
+    <p class="meta">Last updated August 8, 2026.</p>
+    <p>Available iOS store offerings may include monthly, quarterly and yearly Troop Pro subscriptions. The purchase screen obtains the localized Apple price and renewal period from the store. No free trial is offered, and one active subscription covers one troop. Android and web subscriptions remain disabled.</p>
 
     <h2>What RevenueCat processes</h2>
-    <p>For a signed-in native user, Events sends the Supabase account UUID to RevenueCat as the App User ID and requests the configured offering and subscription state. If the user purchases or restores, RevenueCat and Apple or Google process the receipt and purchase history, product, store, transaction identifiers, localized price and period, entitlement, purchase date, expiration, renewal, cancellation, billing issue, refund or revocation, environment and subscription-management information.</p>
-    <p>The audited app code does not send RevenueCat the user's email, name, phone number, health or safety information, or custom customer attributes. Apple or Google collects raw payment credentials; Events does not receive raw card or bank details.</p>
+    <p>For a signed-in native user, Events sends the Supabase account UUID to RevenueCat as the App User ID and requests the configured offering and subscription state. If the user purchases or restores, RevenueCat and Apple process the receipt and purchase history, product, store, transaction identifiers, localized price and period, entitlement, purchase date, expiration, renewal, cancellation, billing issue, refund or revocation, environment and subscription-management information.</p>
+    <p>The app does not send RevenueCat the user's email, name, phone number, health or safety information, or custom customer attributes. Apple collects raw payment credentials; Events does not receive raw card or bank details.</p>
 
     <h2>Renewal and cancellation</h2>
-    <p>A store subscription renews until canceled through Apple or Google. Cancellation stops a future renewal and normally leaves access through the verified paid-through date. Deleting the app, troop or Events account does not itself cancel an external store subscription.</p>
+    <p>An iOS store subscription renews until canceled through Apple. Cancellation stops a future renewal and normally leaves access through the verified paid-through date. Deleting the app, troop or Events account does not itself cancel an external store subscription.</p>
 
     <h2>Refunds</h2>
-    <p>Canceling and requesting a refund are different actions. Apple controls refunds for Apple purchases and Google Play controls refunds for Google Play purchases, subject to applicable law. Events cannot guarantee or override the store's decision. A verified refund, reversal or revocation may end paid access.</p>
+    <p>Canceling and requesting a refund are different actions. Apple controls refunds for Apple purchases, subject to applicable law. Events cannot guarantee or override the store's decision. A verified refund, reversal or revocation may end paid access.</p>
 
     <h2>Deletion</h2>
-    <p>In-app Events account deletion does not automatically delete the RevenueCat customer or independently controlled Apple or Google transaction records. A separate verified processor-deletion request may be required, and some transaction records may be retained for restoration, fraud, accounting, tax, dispute, legal or platform obligations.</p>
+    <p>In an account-deletion operation, Events attempts RevenueCat subscriber deletion before authentication-user deletion. Apple transaction records remain independently controlled and may be retained for restoration, fraud, accounting, tax, dispute, legal or platform obligations.</p>
     <p>Subscription questions: <a href="mailto:eventsofficialapp@gmail.com">eventsofficialapp@gmail.com</a>. Do not email payment credentials or full receipts.</p>
   </main>
   <footer><a href="/events-legal/legal/terms/">Terms</a> · <a href="/events-legal/legal/privacy/">Privacy</a></footer>
